@@ -1,4 +1,4 @@
-package dufuna.berlin.maryokosun.address;
+package com.dufuna.berlin.maryOkosun.address;
 
 public class AddressApp {
     public static void main(String[] args) {
