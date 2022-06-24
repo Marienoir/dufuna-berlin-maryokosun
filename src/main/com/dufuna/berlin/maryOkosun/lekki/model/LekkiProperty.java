@@ -2,9 +2,9 @@ package com.dufuna.berlin.maryOkosun.lekki.model;
 
 import java.util.Objects;
 public class LekkiProperty {
-    String propertyAddress = "12 Chance Road Canada";
-    String propertyType = "Bungalow";
-    int propertyId = 1;
+    String propertyAddress;
+    String propertyType;
+    int propertyId;
     int numberOfBedrooms;
     int numberOfSittingRooms;
     int numberOfKitchens;
