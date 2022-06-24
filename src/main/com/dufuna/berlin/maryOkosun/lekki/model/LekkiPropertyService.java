@@ -5,12 +5,4 @@ public interface LekkiPropertyService {
     public LekkiProperty getProperty();
 }
 
-//class Main {
-//    public static void main(String[] args) {
-//        MockLekkiPropertyService myProperty = new MockLekkiPropertyService();  // Create a new object
-//        myProperty.saveProperty("this is beautiful");
-//        myProperty.getProperty();
-//
-//    }
-//}
 
