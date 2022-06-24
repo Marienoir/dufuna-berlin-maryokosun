@@ -4,7 +4,7 @@ import java.util.Objects;
 public class LekkiProperty {
     String propertyAddress;
     String propertyType;
-    int propertyId = 1;
+    int propertyId;
     int numberOfBedrooms;
     int numberOfSittingRooms;
     int numberOfKitchens;
