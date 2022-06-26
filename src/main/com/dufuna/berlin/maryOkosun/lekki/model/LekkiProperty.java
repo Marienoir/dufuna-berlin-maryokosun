@@ -1,19 +1,26 @@
 package com.dufuna.berlin.maryOkosun.lekki.model;
 
+import java.util.Date;
 import java.util.Objects;
 public class LekkiProperty {
-    String propertyAddress;
-    String propertyType;
-    int propertyId;
-    int numberOfBedrooms;
-    int numberOfSittingRooms;
-    int numberOfKitchens;
-    int numberOfBathrooms;
-    int numberOfToilets;
-    String propertyOwner;
-    String description;
-    String validFrom;
-    String validTo;
+    private String propertyAddress;
+    private String propertyType;
+    private int propertyId;
+    private int numberOfBedrooms;
+    private int numberOfSittingRooms;
+    private int numberOfKitchens;
+    private int numberOfBathrooms;
+    private int numberOfToilets;
+    private String propertyOwner;
+    private String description;
+    private Date validFrom;
+    private Date validTo;
+
+    public LekkiProperty(int propertyId, String propertyType, String propertyAddress) {
+        this.propertyId = propertyId;
+        this.propertyType = propertyType;
+        this.propertyAddress = propertyAddress;
+    }
 
     @Override
     public String toString() {
@@ -42,93 +49,75 @@ public class LekkiProperty {
     public void setPropertyId(int propertyId) {
         this.propertyId = propertyId;
     }
-
     public String getPropertyType() {
         return this.propertyType;
     }
-    // Setter
     public void setPropertyType(String propertyType) {
         this.propertyType = propertyType;
     }
-    // Getter
     public String getPropertyAddress() {
         return this.propertyAddress;
     }
-    // Setter
     public void setPropertyAddress(String propertyAddress) {
         this.propertyAddress = propertyAddress;
     }
     public int getNumberOfBedrooms() {
         return this.numberOfBedrooms;
     }
-    // Setter
     public void setNumberOfBedrooms(int numberOfBedrooms) {
         this.numberOfBedrooms = numberOfBedrooms;
     }
     public int getNumberOfSittingRooms() {
         return this.numberOfSittingRooms;
     }
-    // Setter
     public void setNumberOfSittingRooms(int numberOfSittingRooms) {
         this.numberOfSittingRooms = numberOfSittingRooms;
     }
     public int getNumberOfKitchens() {
         return this.numberOfKitchens;
     }
-    // Setter
     public void setNumberOfKitchens(int numberOfKitchens) {
         this.numberOfKitchens = numberOfKitchens;
     }
     public int getNumberOfBathrooms() {
         return this.numberOfBathrooms;
     }
-    // Setter
     public void setNumberOfBathrooms(int numberOfBathrooms) {
         this.numberOfBathrooms = numberOfBathrooms;
     }
     public int getNumberOfToilets() {
         return this.numberOfToilets;
     }
-    // Setter
     public void setNumberOfToilets(int numberOfToilets) {
         this.numberOfToilets = numberOfToilets;
     }
     public String getPropertyOwner() {
         return this.propertyOwner;
     }
-    // Setter
     public void setPropertyOwner(String propertyOwner) {
         this.propertyOwner = propertyOwner;
     }
     public String getDescription() {
         return this.description;
     }
-    // Setter
     public void setDescription(String description) {
         this.description = description;
     }
-    // Getter
-    public String getValidFrom() {
+    public Date getValidFrom() {
         return this.validFrom;
     }
-    // Setter
-    public void setValidFrom(String validFrom) {
+    public void setValidFrom(Date validFrom) {
         this.validFrom = validFrom;
     }
-    // Getter
-    public String getValidTo() {
+    public Date getValidTo() {
         return this.validTo;
     }
-    // Setter
-    public void setValidTo(String validTo) {
+    public void setValidTo(Date validTo) {
         this.validTo = validTo;
     }
 
     public static void main(String[] args) {
-        LekkiProperty l1 = new LekkiProperty();
-        l1.setPropertyId(1);
-        l1.setPropertyAddress("12,Goodness Estate, Canada");
-        l1.setPropertyType("Bungalow");
+        LekkiProperty l1 = new LekkiProperty(1,"Bungalow","New York City" );
         System.out.println(l1.toString());
         System.out.println((l1.equals(l1)));
         System.out.println(l1.hashCode());
