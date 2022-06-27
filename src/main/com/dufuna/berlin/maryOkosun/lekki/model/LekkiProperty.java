@@ -16,10 +16,20 @@ public class LekkiProperty {
     private Date validFrom;
     private Date validTo;
 
-    public LekkiProperty(int propertyId, String propertyType, String propertyAddress) {
+    public LekkiProperty(int propertyId, String propertyType, String propertyAddress,int numberOfBedrooms, int numberOfSittingRooms, int numberOfKitchens,
+                         int numberOfBathrooms, int numberOfToilets, String propertyOwner, String description,  Date validFrom, Date validTo ) {
         this.propertyId = propertyId;
         this.propertyType = propertyType;
         this.propertyAddress = propertyAddress;
+        this.propertyOwner = propertyOwner;
+        this.description = description;
+        this.numberOfBathrooms = numberOfBathrooms;
+        this.numberOfBedrooms = numberOfBedrooms;
+        this.numberOfKitchens = numberOfKitchens;
+        this.numberOfToilets = numberOfToilets;
+        this.numberOfSittingRooms = numberOfSittingRooms;
+        this.validFrom = validFrom;
+        this.validTo = validTo;
     }
 
     @Override
@@ -117,7 +127,9 @@ public class LekkiProperty {
     }
 
     public static void main(String[] args) {
-        LekkiProperty l1 = new LekkiProperty(1,"Bungalow","New York City" );
+        LekkiProperty l1 = new LekkiProperty(1,"Bungalow","New York City",
+                2, 3, 1, 4, 2,
+                "Mary", "This is a beautiful property", new Date(10/10/2021), new Date(12/12/2023));
         System.out.println(l1.toString());
         System.out.println((l1.equals(l1)));
         System.out.println(l1.hashCode());
