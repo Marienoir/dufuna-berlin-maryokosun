@@ -1,38 +1,27 @@
 package com.dufuna.berlin.maryOkosun.lekki;
 import com.dufuna.berlin.maryOkosun.lekki.model.LekkiProperty;
-import com.dufuna.berlin.maryOkosun.lekki.repository.SimpleLekkiPropertyRepository;
-import com.dufuna.berlin.maryOkosun.lekki.repository.SimpleLekkiPropertyRepositoryImpl;
+import com.dufuna.berlin.maryOkosun.lekki.model.LekkiPropertyService;
+import com.dufuna.berlin.maryOkosun.lekki.model.MockLekkiPropertyService;
 
 import java.util.Date;
 
-import static com.dufuna.berlin.maryOkosun.lekki.repository.SimpleLekkiPropertyRepository.trees;
-
 public class MockLekkiPropertyApp {
     public static void main(String[] args) {
-        String[] typeArr = new String[]{ "Bungalow","Duplex","Storey Building" };
-        String[] addressArr = new String[]{ "Lagos","Canada","New York" };
-        for (int i = 0; i < typeArr.length; i = i + 1) {
-            LekkiProperty property1 = new LekkiProperty(i+1, typeArr[i], addressArr[i]);
-            property1.setDescription("This is a beautiful apartment");
-            property1.setNumberOfBathrooms(3);
-            property1.setNumberOfBedrooms(5);
-            property1.setPropertyOwner("Mary Okosun");
-            property1.setNumberOfKitchens(1);
-            property1.setNumberOfSittingRooms(5);
-            property1.setNumberOfToilets(3);
-            property1.setValidFrom(new Date(2022, 11, 21));
-            property1.setValidTo(new Date(2023, 12, 11));
-            System.out.println("Property created successfully : " + property1);
-            trees.put(i+1, property1);
+    LekkiProperty property1 =  new LekkiProperty(1, "Flat", "Lagos",
+            2, 2, 3, 2, 3,
+            "John", "Expensive taste", new Date(10/10/2021), new Date(12/12/2023));
+    LekkiProperty property2 =  new LekkiProperty(2, "Bungalow", "Ibadan",
+            5, 8, 2, 1, 7,
+            "Doe", "Wonderful apartment", new Date(10/10/2021), new Date(12/12/2023));
+    LekkiProperty property3 =  new LekkiProperty(3, "Duplex", "Osun",
+            3, 7, 8, 4, 4,
+            "Michael", "Beautiful apartment", new Date(10/10/2021), new Date(12/12/2023));
 
-        }
-        LekkiProperty property = new LekkiProperty(1,"Bungalow", "12 Chance Road, New York");
-        LekkiProperty updatedProperty = new LekkiProperty(1,"Storey Building", "Canada");
-
-        SimpleLekkiPropertyRepository propertyRepository = new SimpleLekkiPropertyRepositoryImpl();
-        propertyRepository.save(trees);
-        propertyRepository.findById(3, property);
-        propertyRepository.findAll(trees);
-        propertyRepository.update(1,updatedProperty);
+    LekkiPropertyService service = new MockLekkiPropertyService();
+    service.saveProperty(property1);
+    service.saveProperty(property2);
+    service.saveProperty(property3);
+    System.out.println(service.getProperty(property1.getPropertyId()));
+    System.out.println(service.getAllProperties());
     }
 }
