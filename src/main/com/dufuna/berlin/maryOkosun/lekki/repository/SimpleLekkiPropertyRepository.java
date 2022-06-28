@@ -1,7 +1,6 @@
 package com.dufuna.berlin.maryOkosun.lekki.repository;
 import com.dufuna.berlin.maryOkosun.lekki.model.LekkiProperty;
 
-import java.util.HashMap;
 import java.util.List;
 
 
