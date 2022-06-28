@@ -1,7 +1,7 @@
 package com.dufuna.berlin.maryOkosun.lekki;
 import com.dufuna.berlin.maryOkosun.lekki.model.LekkiProperty;
-import com.dufuna.berlin.maryOkosun.lekki.model.LekkiPropertyService;
-import com.dufuna.berlin.maryOkosun.lekki.model.MockLekkiPropertyService;
+import com.dufuna.berlin.maryOkosun.lekki.service.LekkiPropertyService;
+import com.dufuna.berlin.maryOkosun.lekki.service.MockLekkiPropertyService;
 
 import java.util.Date;
 
@@ -21,7 +21,11 @@ public class MockLekkiPropertyApp {
     service.saveProperty(property1);
     service.saveProperty(property2);
     service.saveProperty(property3);
+
+        //Get a LekkiProperty using LekkiPropertyService and print it to console
     System.out.println(service.getProperty(property1.getPropertyId()));
-    System.out.println(service.getAllProperties());
+
+        //Gets multiple LekkiProperty Objects and print it to the console.
+    System.out.println(service.getProperties());
     }
 }

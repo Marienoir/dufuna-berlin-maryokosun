@@ -16,13 +16,7 @@ public class SimpleLekkiPropertyRepositoryImpl implements SimpleLekkiPropertyRep
     }
 
     public LekkiProperty findById(int propertyId) {
-        for (Map.Entry<Integer, LekkiProperty> property :
-                properties.entrySet()) {
-           if (property.getKey() == propertyId){
-               return property.getValue();
-           }
-        }
-        return null;
+       return properties.get(propertyId);
     }
     public List<LekkiProperty> findAll()  {
         List<LekkiProperty> list = new ArrayList<LekkiProperty>(properties.values());

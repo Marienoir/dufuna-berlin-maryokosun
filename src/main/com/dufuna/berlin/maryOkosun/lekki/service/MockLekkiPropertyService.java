@@ -1,5 +1,6 @@
-package com.dufuna.berlin.maryOkosun.lekki.model;
+package com.dufuna.berlin.maryOkosun.lekki.service;
 
+import com.dufuna.berlin.maryOkosun.lekki.model.LekkiProperty;
 import com.dufuna.berlin.maryOkosun.lekki.repository.SimpleLekkiPropertyRepository;
 import com.dufuna.berlin.maryOkosun.lekki.repository.SimpleLekkiPropertyRepositoryImpl;
 
@@ -18,7 +19,7 @@ public class MockLekkiPropertyService implements LekkiPropertyService {
     }
 
     @Override
-    public List<LekkiProperty> getAllProperties() {
+    public List<LekkiProperty> getProperties() {
         return propertyRepository.findAll();
     }
 }
