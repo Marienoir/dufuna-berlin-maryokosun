@@ -8,6 +8,9 @@ public class TaxServiceImpl implements TaxService {
     private TaxEntity entity = new TaxEntity();
     @Override
     public double calculateTax(int income) {
+        if (income < 0){
+            throw new IllegalArgumentException("Income must be a positive integer");
+        }
         if(income <= entity.BRACKET_UPPER_TWO ){
             return 0.0;
         }

@@ -8,6 +8,13 @@ class TaxServiceImplTest {
 TaxService service = new TaxServiceImpl();
 
     @Test
+    void IncomeLessThan0ThrowsError() {
+        assertThrows(IllegalArgumentException.class,
+            () -> {
+                service.calculateTax(-9);
+            });
+    }
+    @Test
     void IncomeEquals37000Equals0() {
         double tax = service.calculateTax(37000);
         assertEquals(0.00,tax);
