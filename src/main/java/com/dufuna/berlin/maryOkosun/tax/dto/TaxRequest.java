@@ -9,6 +9,9 @@ import lombok.NoArgsConstructor;
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
+/**
+ * Creates a TaxRequest class that accepts two variables
+ */
 public class TaxRequest {
     private int income;
     private double tax;

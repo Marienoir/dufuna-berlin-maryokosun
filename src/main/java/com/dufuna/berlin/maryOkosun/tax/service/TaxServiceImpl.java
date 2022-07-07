@@ -14,6 +14,7 @@ public class TaxServiceImpl implements TaxService {
     private TaxEntity entity = new TaxEntity();
     /**
      * @param income Accepts the income parameter
+     * @return Returns tax owed with the double return type
      * */
     @Override
     public double calculateTax(int income) {

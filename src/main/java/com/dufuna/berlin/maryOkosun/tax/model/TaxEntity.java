@@ -12,7 +12,9 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 public class TaxEntity {
-
+/**
+* Creates variables of the various tax brackets
+* */
     public static final int BRACKET_LOWER_ONE = 0;
     public static final int BRACKET_UPPER_ONE = 18200;
 

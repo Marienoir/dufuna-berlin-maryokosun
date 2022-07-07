@@ -8,9 +8,17 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/api/tax")
+/**
+ * Creates a TaxController class
+ */
 public class TaxController {
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
+    /**
+     * Creates a calculateTax that runs the TaxCalculatorApp
+     * @params Accepts the tax request as a parameter
+     * @return Returns a tax request
+     */
     public TaxRequest calculateTax(@RequestBody TaxRequest taxRequest){
         TaxService service = new TaxServiceImpl();
 
