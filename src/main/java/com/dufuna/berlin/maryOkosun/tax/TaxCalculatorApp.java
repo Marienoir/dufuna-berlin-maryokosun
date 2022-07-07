@@ -8,7 +8,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class TaxCalculatorApp {
     public static void main(String[] args) {
         TaxService service = new TaxServiceImpl();
-        service.calculateTax(37000);
+        service.calculateTax(-8);
         service.calculateTax(90000);
         service.calculateTax(180000);
         SpringApplication.run(TaxCalculatorApp.class, args);
