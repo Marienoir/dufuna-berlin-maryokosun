@@ -3,6 +3,12 @@ package com.dufuna.berlin.maryOkosun.tax.model;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+/**
+ * @author Mary Okosun
+ * @version 1.0
+ * @since 1.0
+ *
+ */
 @Data
 @NoArgsConstructor
 public class TaxEntity {

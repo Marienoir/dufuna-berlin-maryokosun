@@ -3,15 +3,24 @@ package com.dufuna.berlin.maryOkosun.tax.service;
 import com.dufuna.berlin.maryOkosun.tax.model.TaxEntity;
 import org.springframework.stereotype.Service;
 
+/**
+ *  Implements the tax service interface
+ * */
 @Service
 public class TaxServiceImpl implements TaxService {
+    /**
+     * Creates a new object of the tax entity
+     * */
     private TaxEntity entity = new TaxEntity();
+    /**
+     * @param income Accepts the income parameter
+     * */
     @Override
     public double calculateTax(int income) {
         if (income < 0){
             throw new IllegalArgumentException("Income must be a positive integer");
         }
-        if(income <= entity.BRACKET_UPPER_TWO ){
+        else if(income <= entity.BRACKET_UPPER_TWO ){
             return 0.0;
         }
         else if(income <= entity.BRACKET_UPPER_THREE ){
